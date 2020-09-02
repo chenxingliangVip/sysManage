@@ -14,7 +14,7 @@
     name: "page403",
     methods: {
       backupLogin() {
-        this.$router.push({path: '/login'})
+        this.$router.push({path: '/Login'})
       },
     }
   }

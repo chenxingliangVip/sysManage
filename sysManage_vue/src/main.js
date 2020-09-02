@@ -7,6 +7,8 @@ import echarts from 'echarts'
 import ElementUI from "element-ui";
 import "./styles/element-variables.scss";
 import 'element-ui/lib/theme-chalk/index.css'
+import popout from '@/components/PopoutDialog/Index' //弹框组件
+import sysTable from "@/components/Table/Index"; //表格组件
 
 Vue.prototype.$echarts = echarts
 
@@ -29,6 +31,8 @@ Vue.use(ElementUI);
 Vue.prototype.$http = api;
 Vue.prototype.$eventBus = new Vue();
 Vue.prototype.$notify = Notification;
+Vue.component('popout', popout);
+Vue.component('sysTable', sysTable);
 
 Vue.prototype.hasRole = hasPermission
 

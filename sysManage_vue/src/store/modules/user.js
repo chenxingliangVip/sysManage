@@ -1,4 +1,4 @@
-// import { login,logout ,getInfo} from "@/api/user";
+// import { Login,logout ,getInfo} from "@/api/user";
 import { getToken, setToken, removeToken } from "@/utils/auth";
 import router, { resetRouter } from "@/router";
 
@@ -70,8 +70,8 @@ const actions = {
     })
   },
 
-  // user login
-  login({ commit }, userInfo) {
+  // user Login
+  Login({ commit }, userInfo) {
     const { username, password } = userInfo;
     return new Promise((resolve, reject) => {
       if (username && password) {
@@ -82,7 +82,7 @@ const actions = {
       } else {
         reject();
       }
-      //   login({ username: username.trim(), password: password }).then(response => {
+      //   Login({ username: username.trim(), password: password }).then(response => {
       //     const { data } = response
       //     commit('SET_TOKEN', data.token)
       //     setToken(data.token)
