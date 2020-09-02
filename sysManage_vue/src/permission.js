@@ -85,6 +85,6 @@ router.beforeEach((to, from, next) => {
 router.afterEach(() => {
     setTimeout(() => {
         // const browserHeaderTitle = store.getters.browserHeaderTitle
-        setTitle("管理系统")
+        setTitle("威尔生产运营管理系统")
     }, 0)
 })
