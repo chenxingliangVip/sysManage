@@ -5,7 +5,7 @@ import "normalize.css/normalize.css"; // a modern alternative to CSS resets
 import {default as api} from './utils/api'
 import echarts from 'echarts'
 import ElementUI from "element-ui";
-import "./styles/element-variables.scss";
+import "./assets/style/element-variables.scss";
 import 'element-ui/lib/theme-chalk/index.css'
 import popout from '@/components/PopoutDialog/Index' //弹框组件
 import sysTable from "@/components/Table/Index"; //表格组件
