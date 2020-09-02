@@ -142,6 +142,7 @@ export default {
             background: #F2F2F2;
             height: 30px;
             line-height: 30px;
+            padding: 0 !important;
         }
         th {
             font-weight: 400;

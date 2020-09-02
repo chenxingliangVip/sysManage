@@ -38,11 +38,11 @@
         }
         &::after {
             content: ' ';
-            width: calc(100% - 600px);
+            width: calc(100% - 585px);
             height: 1px;
             background: #284358;
             position: absolute;
-            right: 0px;
+            right: -15px;
             bottom: 0;
         }
         .MenuList {

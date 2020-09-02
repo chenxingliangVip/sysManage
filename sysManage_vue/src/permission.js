@@ -1,7 +1,6 @@
 import router from './router'
-import store from './store'
 import { getToken } from '@/utils/auth' // 验权
-import { asyncRouterMap, constantRouterMap } from '@/router/index'
+// import { asyncRouterMap, constantRouterMap } from '@/router/index'
 import {
     setTitle
 } from '@/utils/util'
@@ -15,22 +14,22 @@ function hasPermission(roles, permissionRoles) {
 }
 const whiteList = ['/Login'] // 不重定向白名单
 router.beforeEach((to, from, next) => {
-    let allPermissionNarHead = {};
-    for (let k in constantRouterMap) {
-        let router = constantRouterMap[k];
-        if (router.meta && router.meta.permission) {
-            allPermissionNarHead[router.path] = router.meta.permission;
-        }
-        if (router.children) {
-            for (let child of router.children) {
-                let r = router.path + "/" + child.path;
-                if (child.meta && child.meta.permission) {
-                    allPermissionNarHead[r] = child.meta.permission;
-                }
-            }
+    // let allPermissionNarHead = {};
+    // for (let k in constantRouterMap) {
+    //     let router = constantRouterMap[k];
+    //     if (router.meta && router.meta.permission) {
+    //         allPermissionNarHead[router.path] = router.meta.permission;
+    //     }
+    //     if (router.children) {
+    //         for (let child of router.children) {
+    //             let r = router.path + "/" + child.path;
+    //             if (child.meta && child.meta.permission) {
+    //                 allPermissionNarHead[r] = child.meta.permission;
+    //             }
+    //         }
 
-        }
-    }
+    //     }
+    // }
     let user = localStorage.getItem('LoginStatus')
     if (user) {
         // user = JSON.parse(user);

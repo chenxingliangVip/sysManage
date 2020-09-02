@@ -37,11 +37,11 @@
         }
         &::after {
             content: ' ';
-            width: calc(100% - 400px);
+            width: calc(100% - 385px);
             height: 1px;
             background: #284358;
             position: absolute;
-            right: 0px;
+            right: -15px;
             bottom: 0;
         }
         .MenuList {

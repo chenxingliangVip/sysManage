@@ -246,7 +246,7 @@ export default {
 .start_dialog {
     .popout-main {
         width: 60%;
-        height: 560px;
+        height: 590px;
         left: 20%;
         background: #284358;
         color: #ffffff;
@@ -258,7 +258,7 @@ export default {
 .handover_dialog {
     .popout-main {
         width: 55%;
-        height: 450px;
+        height: 460px;
         left: 22%;
         background: #284358;
         color: #ffffff;
