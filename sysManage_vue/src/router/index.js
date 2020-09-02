@@ -38,6 +38,10 @@ export default new Router({
             name: 'ProductLine',
             meta: {title: '产线实时看板'},
             component: () => import("@/views/BigScreen/ProductLine/Index")
+        }, {
+            path: '/*',
+            name: 'noFound',
+            component: () => import("@/views/page403")
         }
     ]
 })

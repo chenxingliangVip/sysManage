@@ -62,7 +62,7 @@ router.beforeEach((to, from, next) => {
         //             let path = to.path;
         //             let access = allPermissionNarHead[path];
         //             if (access && _permission.indexOf(access) < 0 && user.type != 1) {
-        //                 next({ path: '/page403' });
+        //                 next({ path: '/noFound' });
         //             } else {
         //                 next() // hack方法 确保addRoutes已完成 ,set the replace: true so the navigation will not leave a history record
         //             }
