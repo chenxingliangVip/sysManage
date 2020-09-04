@@ -73,8 +73,10 @@
                     </el-row>
                 </el-form>
                 <div class="button">
-                    <span v-if="productState == 2" class="inproduct">正 在<br>生 产</span>
-                    <span v-else @click="goStart()">启 动<br>生 产</span>
+                    <img v-if="productState == 2" class="inproduct" src="@/assets/img/inpd.png">
+                    <img v-else @click="goStart()" src="@/assets/img/startpd.png">
+                    <!-- <span v-if="productState == 2" class="inproduct">正 在<br>生 产</span> -->
+                    <!-- <span v-else @click="goStart()">启 动<br>生 产</span> -->
                 </div>
                 <div style="clear: both"></div>
             </div>

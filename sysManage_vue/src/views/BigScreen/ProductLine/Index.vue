@@ -1,6 +1,9 @@
 <template>
     <div class="ProductLine" v-bind:style="style">
-        <div class="header"></div>
+		<nx-full-screen class="allfull screenfull" style="float: right"></nx-full-screen>
+        <div class="header">
+            <p>威尔药业 · 产线实时看板</p>
+        </div>
         <div class="main_contain">
             <el-row :gutter="10">
                 <el-col :span="8" class="col_list">
@@ -71,6 +74,7 @@
 <script>
 import resize from '@/assets/js/resize'
 import echartOption from './echart'
+import nxFullScreen from '@/components/nx-full-screen/index'
 export default {
     data() {
         return {
@@ -95,6 +99,9 @@ export default {
     mounted() {
         // this.pageShow()
         this.getEchartData()
+    },
+    components: {
+        nxFullScreen
     },
 }
 </script>

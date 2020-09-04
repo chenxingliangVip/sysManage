@@ -35,7 +35,7 @@
                     </el-select>
                 </div>
                 <div class="input_flex">
-                    <el-date-picker type="date" placeholder="计划日期" v-model="searchInput7" value-format="yyyy-MM-dd"></el-date-picker>
+                    <el-date-picker v-model="searchInput7" type="daterange" range-separator="-" start-placeholder="开始日期" end-placeholder="结束日期"></el-date-picker>
                 </div>
                 <div class="input_flex search">
                     <span class="zll-search">搜索</span>
@@ -48,11 +48,12 @@
         </div>
         <!-- table -->
         <sys-table  
-            :isMultipleSelection="false" 
+            :isMultipleSelection="true" 
             :tableData="tableData" 
             :tableLoading="tableLoading" 
             :tableHeader="tableHeader"
             :scopeWidth="120"
+            @getSelection="getSelection"
         >
             <template slot-scope="scope" slot="operate">
                 <el-button @click="goDetail(scope.row)" type="text" size="small">查看</el-button>
@@ -95,8 +96,10 @@
                     tableNum6: 22,//订单量
                     tableNum7: 12,//未排产
                     tableNum8: '排产状态',//排产状态
+                    tableNum9: '',//订单日期
                 }],
                 tableHeader:[],
+                selectList: [],
                 addDialog: false,
             }
         },
@@ -104,19 +107,16 @@
             getTableList(){//获取表格数据
                 this.tableLoading = true;
                 setTimeout(()=>{
-                    for (let i = 0; i < this.tableData.length; i++) {
-                        this.tableData[i]['index'] = i +1
-                    }
                     this.tableHeader =  [
-                        {"columnValue": "index", "columnName": "序号", 'width': '50'},
                         {"columnValue": "tableNum1", "columnName": "计划人"},
                         {"columnValue": "tableNum2", "columnName": "订单号"},
                         {"columnValue": "tableNum3", "columnName": "产品名称"},
                         {"columnValue": "tableNum4", "columnName": "产品编码"},
-                        {"columnValue": "tableNum5", "columnName": "规格", 'width': '100'},
-                        {"columnValue": "tableNum6", "columnName": "订单量", isSortable: true, 'width': '100'},
-                        {"columnValue": "tableNum7", "columnName": "未排产", isSortable: true, 'width': '100'},
-                        {"columnValue": "tableNum8", "columnName": "排产状态", 'width': '100'},
+                        {"columnValue": "tableNum5", "columnName": "规格", width: '100'},
+                        {"columnValue": "tableNum6", "columnName": "订单量", isSortable: true, width: '100'},
+                        {"columnValue": "tableNum7", "columnName": "未排产", isSortable: true, width: '100'},
+                        {"columnValue": "tableNum8", "columnName": "排产状态", width: '100'},
+                        {"columnValue": "tableNum9", "columnName": "订单日期"},
                     ]
                     this.tableData = JSON.parse(JSON.stringify(this.tableData))
                     this.tableLoading = false;
@@ -127,12 +127,19 @@
                 this.addDialog = false
             },
             add() {
-                this.addDialog = true
-                this.title = '新建'
+                if(this.selectList.length <1 ){
+                    this.$message.warning("至少选择一列数据！");
+                }else{
+                    this.addDialog = true
+                    this.title = '新建'
+                }
             },
             goDetail(){
                 this.addDialog = true
                 this.title = '查看'
+            },
+            getSelection(val){ //选中List
+                this.selectList = val;
             },
             searchReset() { //重置搜索
                 this.searchInput1 = "";

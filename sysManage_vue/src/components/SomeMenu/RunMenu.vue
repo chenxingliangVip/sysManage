@@ -38,7 +38,7 @@
         }
         &::after {
             content: ' ';
-            width: calc(100% - 585px);
+            width: calc(100% - 645px);
             height: 1px;
             background: #284358;
             position: absolute;
@@ -46,8 +46,8 @@
             bottom: 0;
         }
         .MenuList {
-            height: 35px;
-            line-height: 33px;
+            height: 30px;
+            line-height: 30px;
             width: 200px;
             float: left;
             text-align: center;
@@ -55,20 +55,36 @@
             color: #333;
             font-size: 12px;
             cursor: pointer;
+            border: 1px solid #ccc;
             border-bottom: 1px solid #284358;
             border-top-left-radius: 6px;
             border-top-right-radius: 6px;
+            margin-right: 20px;
+            position: relative;
+            top: 5px;
             &:hover {
                 transition: all .3s;
                 background: #fff;
             }
             &.active {
+                height: 35px !important;
+                line-height: 35px !important;
+                top: 0 !important;
                 font-size: 14px;
                 transition: all .3s;
                 background: #fff;
                 border: 1px solid #284358;
                 border-bottom: 1px solid #fff;
                 box-shadow: 0px -5px 4px -5px #284358;
+            }
+            &::after {
+                content: ' ';
+                width: 21px;
+                height: 1px;
+                background: #284358;
+                position: absolute;
+                right: -21px;
+                bottom: -1px;
             }
         }
     }

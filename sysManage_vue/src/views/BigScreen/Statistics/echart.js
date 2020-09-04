@@ -281,4 +281,141 @@ export default {
         }
         ]
     },
+    option4: {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
+        color: ['rgba(51, 140, 249, .7)', 'rgba(150, 237, 193,.7)', 'rgba(234, 107, 124, .7)', 'rgba(252, 183, 91,.7)'],
+        grid: {
+            top: "30",
+            left: "10",
+            bottom: "30",
+            right: "10",
+        },
+        legend: {
+            show: true,
+            top: 0,
+            right: 26,
+            data: ['酯化部', '聚合部', '封端部', '药铺部'],
+            textStyle: {
+                color: "RGB(193,223,255)"
+            }
+        },
+        xAxis: [{
+            type: "category",
+            data: ["2020-01", "2020-02", "2020-03"],
+            axisTick: {
+                alignWithLabel: true
+            },
+            nameTextStyle: {
+                color: "#fff"
+            },
+            axisLine: {
+                lineStyle: {
+                    color: "RGB(47,68,114)"
+                }
+            },
+            axisLabel: {
+                textStyle: {
+                    color: "white"
+                },
+            }
+        }],
+        yAxis: [{
+            type: "value",
+            axisLabel: {
+                show: false,
+            },
+            splitLine: {
+                show: false,
+            },
+            axisLine: {
+                show: false,
+            }
+        }],
+        series: [{
+            name: '酯化部',
+            type: 'bar',
+            barWidth: "25",
+            data: data3,
+            itemStyle: {
+                normal: {
+                    color: {
+                        x: 0,
+                        y: 1,
+                        x2: 0,
+                        y2: 0,
+                        colorStops: [
+                            { offset: 0, color: 'rgba(51, 140, 249, .2)' },
+                            { offset: 1, color: 'rgba(51, 140, 249, .9)' }
+                        ]
+                    },
+                }
+            },
+        },
+        {
+            name: '聚合部',
+            type: 'bar',
+            barWidth: "25",
+            data: data4,
+            itemStyle: {
+                normal: {
+                    color: {
+                        x: 0,
+                        y: 1,
+                        x2: 0,
+                        y2: 0,
+                        colorStops: [
+                            { offset: 0, color: 'rgba(150, 237, 193, .2)' },
+                            { offset: 1, color: 'rgba(150, 237, 193, .9)' }
+                        ]
+                    },
+                }
+            },
+        },
+        {
+            name: '封端部',
+            type: 'bar',
+            barWidth: "25",
+            data: data5,
+            itemStyle: {
+                normal: {
+                    color: {
+                        x: 0,
+                        y: 1,
+                        x2: 0,
+                        y2: 0,
+                        colorStops: [
+                            { offset: 0, color: 'rgba(234, 107, 124, .2)' },
+                            { offset: 1, color: 'rgba(234, 107, 124, .9)' }
+                        ]
+                    },
+                }
+            },
+        },
+        {
+            name: '药铺部',
+            type: 'bar',
+            barWidth: "25",
+            data: data6,
+            itemStyle: {
+                normal: {
+                    color: {
+                        x: 0,
+                        y: 1,
+                        x2: 0,
+                        y2: 0,
+                        colorStops: [
+                            { offset: 0, color: 'rgba(252, 183, 91, .2)' },
+                            { offset: 1, color: 'rgba(252, 183, 91, .9)' }
+                        ]
+                    },
+                }
+            },
+        }
+        ]
+    },
 }

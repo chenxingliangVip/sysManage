@@ -270,7 +270,7 @@ export default {
 .package_dialog {
     .popout-main {
         width: 30%;
-        height: 510px;
+        height: 530px;
         left: 35%;
     }
 }
@@ -285,6 +285,12 @@ export default {
     .popout-main {
         height: 700px;
         top: 10%;
+    }
+}
+.result_dialog {
+    .popout-main {
+        height: 500px;
+        width: 40%;
     }
 }
 </style>

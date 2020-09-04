@@ -85,6 +85,8 @@ export default {
         overflow:hidden;
         text-overflow:ellipsis;
         white-space:nowrap;
+        height: 30px !important;
+        line-height: 30px !important;
         img {
             height: 60px;
         }

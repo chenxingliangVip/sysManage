@@ -22,7 +22,7 @@
                     </el-select>
                 </div>
                 <div class="input_flex">
-                    <el-date-picker v-model="searchInput5" type="date" placeholder="计划日期"></el-date-picker>
+                    <el-date-picker v-model="searchInput5" type="daterange" range-separator="-" start-placeholder="开始日期" end-placeholder="结束日期"></el-date-picker>
                 </div>
                 <div class="input_flex search">
                     <span class="zll-search">搜索</span>
@@ -37,7 +37,7 @@
             :tableHeader="tableHeader"
             :scopeWidth="120">
             <template slot-scope="scope" slot="operate">
-                <el-button type="text" size="small" v-if="scope.row.tabledata8 == '待生产'" style="color: #e82626">SRP激活</el-button>
+                <el-button type="text" size="small" v-if="scope.row.tabledata8 == '待生产'" style="color: #e82626" @click="activate()">SRP激活</el-button>
                 <el-button type="text" size="small" v-else @click="goDetail(scope.row)">查看</el-button>
             </template>
         </sys-table>
@@ -119,8 +119,19 @@
                     this.tableLoading = false;
                 },500)
             },
-            goDetail(){
+            goDetail() {
                 this.addDialog = true
+            },
+            activate() { //激活
+                this.$confirm('确定激活？', '提示', {       
+                        distinguishCancelAndClose: true,
+                        cancelButtonText: '取消',
+                        confirmButtonText: '确定',
+                    }).then(() => {
+                        this.$message.success("激活成功")
+                    }).catch(() => {
+                            
+                    });
             },
             searchReset() { //重置搜索
                 this.searchInput1 = "";

@@ -45,18 +45,19 @@ export default {
             type: 'bar',
             yAxisIndex: 0,
             data: data,
-            barWidth: 40,
+            barWidth: 60,
             itemStyle: {
                 normal: {
                     barBorderRadius: 30,
-                    color: '#1089E7'
+                    color: 'rgba(16, 137, 231, .7)'
                 }
             },
             label: {
                 normal: {
                     show: true,
                     position: 'inside',
-                    formatter: formatter
+                    formatter: formatter,
+                    fontSize: 16
                 }
             },
         }, {
@@ -65,13 +66,13 @@ export default {
             yAxisIndex: 1,
             barGap: '-100%',
             data: [100,],
-            barWidth: 40,
+            barWidth: 60,
             itemStyle: {
                 normal: {
                     color: 'none',
                     borderColor: '#00c1de',
                     borderWidth: 3,
-                    barBorderRadius: 15,
+                    barBorderRadius: 30,
                 }
             }
         }, ]

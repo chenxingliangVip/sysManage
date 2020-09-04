@@ -78,6 +78,10 @@
                 width: 20%;
                 min-height: 300px;
                 display: flex;align-items: center;justify-content: center;
+                img {
+                    width: 100px;
+                    cursor: pointer;
+                }
                 span {
                     background: #67C23A;
                     width: 80px;
@@ -474,26 +478,30 @@
             height: 100px;
             margin-bottom: 15px;
             .logo {
-                width: 35px;
+                width: 26px;
                 background: #34BFC6;
-                height: 100%;
+                height: 98px;
+                line-height: 28px;
                 color: #ffffff;
-                padding: 30px 10px;
                 font-size: 14px;
                 border-top-left-radius: 10px;
                 border-bottom-left-radius: 10px;
                 float: left;
+                display: flex;
+                align-items: center;
+                justify-content: center; 
+                text-align: center;
             }
             .imgsrc {
                 float: left;
                 width: calc(100% - 35px);
                 height: 98px;
+                display: flex;
+                align-items: center;
+                justify-content: center;  
                 img {
-                    width: 100%;
-                    padding: 5px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;   
+                    height: 98px;
+                    padding: 5px; 
                 }
             }
             .formList {

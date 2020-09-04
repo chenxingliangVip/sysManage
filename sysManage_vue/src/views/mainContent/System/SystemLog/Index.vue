@@ -53,8 +53,8 @@
                 this.tableLoading = true;
                 setTimeout(()=>{
                     this.tableHeader =  [
-                        {"columnValue": "tableNum1", "columnName": "用户名", width: '100px'},
-                        {"columnValue": "tableNum2", "columnName": "姓名", width: '100px'},
+                        {"columnValue": "tableNum1", "columnName": "用户名"},
+                        {"columnValue": "tableNum2", "columnName": "姓名"},
                         {"columnValue": "tableNum3", "columnName": "操作记录"},
                         {"columnValue": "tableNum4", "columnName": "操作时间"},
                     ]

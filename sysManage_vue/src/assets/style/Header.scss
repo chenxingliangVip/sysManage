@@ -165,6 +165,9 @@
                     background: transparent;
                     opacity: 1;
                 }
+                span {
+                    top: 7px !important;
+                }
             }
             &:hover {
                 background: #f6f6f6;
@@ -174,7 +177,7 @@
             span {
                 position: absolute;
                 right: 5px;
-                top: 7px;
+                top: 5px;
                 width: 16px;
                 height: 16px;
                 line-height: 16px;

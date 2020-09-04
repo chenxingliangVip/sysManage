@@ -141,7 +141,7 @@
         </div> 
         <!-- qc结果反馈弹框 -->
         <div class="zll-dialog">
-            <popout title="qc结果反馈" :visible.sync="resultDialog" v-if="resultDialog" height="400px">
+            <popout title="qc结果反馈" :visible.sync="resultDialog" v-if="resultDialog" class="result_dialog">
                 <Result ref="add" :timeOut="countdown" slot="content"></Result>
                 <template slot="bottom">
                     <p class="zll-botton">报 告</p>

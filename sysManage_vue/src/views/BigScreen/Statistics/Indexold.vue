@@ -1,11 +1,9 @@
 <template>
-    <div class="Statistics Statistics2" v-bind:style="style">
+    <div class="Statistics" v-bind:style="style">
 		<nx-full-screen class="allfull screenfull" style="float: right"></nx-full-screen>
-        <div class="header">
-            <p>威尔药业 · 生产信息统计表</p>
-        </div>
+        <div class="header"></div>
         <div class="main_contain">
-            <el-row :gutter="6">
+            <el-row :gutter="10">
                 <el-col :span="16" class="col_list">
                     <p class="tab_name"><i class="el-icon-d-arrow-right"></i>产品状态</p>
                     <div class="echart1" ref="echart1"></div>
@@ -15,7 +13,7 @@
                     <div class="echart2" ref="echart2"></div>
                 </el-col>
             </el-row>
-            <el-row :gutter="6">
+            <el-row :gutter="10">
                 <el-col :span="8" class="col_list">
                     <p class="tab_name"><i class="el-icon-d-arrow-right"></i>入库产品目录</p>
                     <div class="table_list">
@@ -101,7 +99,7 @@ export default {
         },
         getEchartData3() {  //echart3 各生产部准点率
             let echart3 = this.$echarts.init(this.$refs.echart3);
-            echart3.setOption(echartOption.option4)
+            echart3.setOption(echartOption.option3)
         },
     },
     mounted() {

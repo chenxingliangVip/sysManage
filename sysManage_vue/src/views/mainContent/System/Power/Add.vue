@@ -18,11 +18,7 @@
             >
                 <el-table-column prop="index"  label="序号" width="50" :show-overflow-tooltip="true"></el-table-column>
                 <el-table-column prop="tableNum1" label="主标题"  width="100"  :show-overflow-tooltip="true"></el-table-column>
-                <el-table-column prop="tableNum2" label="副标题"  width="150" :show-overflow-tooltip="true">
-                    <template slot-scope="{row}">
-                        <el-checkbox v-model="checked">{{ row.tableNum2 }}</el-checkbox>
-                    </template>
-                </el-table-column>
+                <el-table-column prop="tableNum2" label="副标题"  width="150" :show-overflow-tooltip="true"></el-table-column>
                 <el-table-column label="内容" :show-overflow-tooltip="true">
                     <template slot-scope="{row}">
                         <el-checkbox-group v-model="check">

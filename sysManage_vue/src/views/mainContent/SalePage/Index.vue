@@ -25,7 +25,7 @@
                     </el-select>
                 </div>
                 <div class="input_flex">
-                    <el-date-picker v-model="searchInput7" type="date" placeholder="订单日期"></el-date-picker>
+                    <el-date-picker v-model="searchInput7" type="daterange" range-separator="-" start-placeholder="开始日期" end-placeholder="结束日期"></el-date-picker>
                 </div>
                 <div class="input_flex search">
                     <span class="zll-search">搜索</span>
