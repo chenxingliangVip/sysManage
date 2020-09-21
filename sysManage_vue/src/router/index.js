@@ -31,13 +31,23 @@ export default new Router({
         }, {
             path: '/Statistics',
             name: 'Statistics',
-            meta: {title: '生产信息统计表'},
+            meta: {title: '看板1'},
             component: () => import("@/views/BigScreen/Statistics/Index")
+        }, {
+            path: '/ProductLine2',
+            name: 'ProductLine2',
+            meta: {title: '看板2'},
+            component: () => import("@/views/BigScreen/ProductLineold/Index")
         }, {
             path: '/ProductLine',
             name: 'ProductLine',
-            meta: {title: '产线实时看板'},
+            meta: {title: '看板3'},
             component: () => import("@/views/BigScreen/ProductLine/Index")
+        }, {
+            path: '/QcScreen',
+            name: 'QcScreen',
+            meta: {title: '看板4'},
+            component: () => import("@/views/BigScreen/QcScreen/Index")
         }, {
             path: '/*',
             name: 'noFound',

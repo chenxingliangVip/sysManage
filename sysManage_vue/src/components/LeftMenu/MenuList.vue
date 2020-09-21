@@ -35,8 +35,16 @@ export default {
                     const {href} = this.$router.resolve({ path: '/Statistics' })
                     window.open(href, '_blank')
                     return false
+                }else if( name == 'ProductLine2' ) {
+                    const {href} = this.$router.resolve({ path: '/ProductLine2' })
+                    window.open(href, '_blank')
+                    return false
                 }else if( name == 'ProductLine' ) {
                     const {href} = this.$router.resolve({ path: '/ProductLine' })
+                    window.open(href, '_blank')
+                    return false
+                }else if( name == 'QcScreen' ) {
+                    const {href} = this.$router.resolve({ path: '/QcScreen' })
                     window.open(href, '_blank')
                     return false
                 }

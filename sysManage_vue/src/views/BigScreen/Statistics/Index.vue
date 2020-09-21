@@ -170,11 +170,11 @@ export default {
             _this.nowDate = yy + '/' + mm + '/' + dd
             _this.nowWeek = week
         },
-        barActive() {
+        barActive() {//自动高亮
             let echart = this.$echarts.init(this.$refs.echart1);
             let index = -1 //高亮所在下标
-            let index2 = -1 //高亮所在下标
             let dataLength = echartOption.option1.series[0].data.length
+            let index2 = -1 //高亮所在下标
             let echart2 = this.$echarts.init(this.$refs.echart2);
             let dataLength2 = echartOption.option2.series[0].data.length
             setInterval(()=>{
@@ -196,6 +196,9 @@ export default {
 					seriesIndex: 0,
 					dataIndex: index
 				});
+                if (index > dataLength) {
+                    index = 0
+                }
                 // 清除之前的高亮
                 echart2.dispatchAction({
                     type: 'downplay',
@@ -214,9 +217,6 @@ export default {
 					seriesIndex: 0,
 					dataIndex: index2
 				});
-                if (index > dataLength) {
-                    index = 0
-                }
                 if (index2 > dataLength2) {
                     index2 = 0
                 }

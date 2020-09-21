@@ -60,10 +60,16 @@ export default [
         children: [ //子菜单
             {
                 name: 'Statistics',//路由name
-                title: '生产信息统计表',
+                title: '看板1',
+            }, {
+                name: 'ProductLine2',//路由name
+                title: '看板2',
             }, {
                 name: 'ProductLine',//路由name
-                title: '产线实时看板',
+                title: '看板3',
+            }, {
+                name: 'QcScreen',//路由name
+                title: '看板4',
             },
         ]
     }, {
