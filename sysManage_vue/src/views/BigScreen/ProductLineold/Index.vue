@@ -1,86 +1,78 @@
 <template>
-    <div class="ProductLine2" v-bind:style="style">
+    <div class="ProductLine" v-bind:style="style">
 		<nx-full-screen class="allfull screenfull" style="float: right; position: relative;    z-index: 111;"></nx-full-screen>
         <div class="header">
-            <p>聚合 · 3号生产线可视化看板</p>
+            <p>威尔药业 · 产线实时看板</p>
             <div class="TimeForm">
                 <p class="time">{{nowDate}} {{nowWeek}} {{nowTime}} </p>
             </div>
         </div>
         <div class="main_contain">
-            <div class="progress">
-                <div class="echart" ref="echart"></div>
-            </div>
             <div class="el">
                 <div class="col_list">
-                    <div class="border left-top"></div>
-                    <div class="border left-bottom"></div>
-                    <div class="border right-top"></div>
-                    <div class="border right-bottom"></div>
                     <p class="tab_name">
-                        <span class="name">批次号：</span>
-                        <span class="value">P1912063</span>
-                    </p>
-                    <p class="tab_name">
-                        <span class="name">名称：</span>
+                        <span class="name name1">名称：</span>
                         <span class="value">聚山梨酯20</span>
                     </p>
                     <p class="tab_name">
-                        <span class="name">编码：</span>
-                        <span class="value">E010232</span>
+                        <span class="name name1">规格：</span>
+                        <span class="value">药用级</span>
                     </p>
                     <p class="tab_name">
-                        <span class="name">规格：</span>
-                        <span class="value">药用级</span>
+                        <span class="name name1">编码：</span>
+                        <span class="value">E010232</span>
                     </p>
                 </div>
                 <div class="col_list">
-                    <div class="border left-top"></div>
-                    <div class="border left-bottom"></div>
-                    <div class="border right-top"></div>
-                    <div class="border right-bottom"></div>
                     <p class="tab_name">
-                        <span class="name">开机时间：</span>
-                        <span class="value">2020-05-01 16:00</span>
+                        <span class="name name2">计划开始：</span>
+                        <span class="value">2020-05-01</span>
                     </p>
                     <p class="tab_name">
-                        <span class="name">当前阶段：</span>
-                        <span class="value">M2聚合</span>
+                        <span class="name name2">实际开始：</span>
+                        <span class="value">2020-05-01</span>
+                    </p>
+                </div>
+                <div class="col_list">
+                    <p class="tab_name">
+                        <span class="name name3">计划结束：</span>
+                        <span class="value">2020-05-20</span>
                     </p>
                     <p class="tab_name">
-                        <span class="name">标准工时：</span>
-                        <span class="value">8小时</span>
-                    </p>
-                    <p class="tab_name">
-                        <span class="name">已用时：</span>
-                        <span class="value">4.3小时</span>
+                        <span class="name name3">实际结束：</span>
+                        <span class="value">2020-05-20</span>
                     </p>
                 </div>
                 <div style="clear: both"></div>
             </div>
-            <div class="el">
-                <div class="col_list col_list2">
-                    <div class="border left-top"></div>
-                    <div class="border left-bottom"></div>
-                    <div class="border right-top"></div>
-                    <div class="border right-bottom"></div>
+            <div class="progress">
+                <div class="border left-top"></div>
+                <div class="border left-bottom"></div>
+                <div class="border right-top"></div>
+                <div class="border right-bottom"></div>
+                <h1>P191212028   <span>/</span>    聚合生产线 · JD01</h1>
+                <div class="echart" ref="echart"></div>
+            </div>
+            <div>
+                <div class="col_list2">
                     <p class="tab_name">
-                        <span class="name">生产部门：</span>
-                        <span class="value">聚合部</span>
+                        <span class="name name4">生产部门：</span>
+                        <span class="value">2部</span>
                     </p>
                     <p class="tab_name">
-                        <span class="name">当前班组：</span>
+                        <span class="name name4">当前班组：</span>
                         <span class="value">2组</span>
                     </p>
+                </div>
+                <div class="col_list2">
                     <p class="tab_name">
-                        <span class="name">班次：</span>
+                        <span class="name name5">班次：</span>
                         <span class="value">白班 08:00 – 16:00</span>
                     </p>
                     <p class="tab_name">
-                        <span class="name">负责人：</span>
+                        <span class="name name5">负责人：</span>
                         <span class="value">徐小伟</span>
                     </p>
-                    <div style="clear: both"></div>
                 </div>
             </div>
         </div>

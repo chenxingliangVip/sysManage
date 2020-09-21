@@ -240,5 +240,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/style/statisticChart.scss'
+@import '@/assets/style/bigScreen.scss'
 </style>
