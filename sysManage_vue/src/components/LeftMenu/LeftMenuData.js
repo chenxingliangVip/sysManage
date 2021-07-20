@@ -70,7 +70,7 @@ export default [
             }, {
                 name: 'QcScreen',//路由name
                 title: '看板4',
-            },
+            }
         ]
     }, {
         title: '系统',

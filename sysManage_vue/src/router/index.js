@@ -49,6 +49,16 @@ export default new Router({
             meta: {title: '看板4'},
             component: () => import("@/views/BigScreen/QcScreen/Index")
         }, {
+            path: '/Laboratory',
+            name: 'Laboratory',
+            meta: {title: '看板5'},
+            component: () => import("@/views/BigScreen/Laboratory/Index")
+        }, {
+            path: '/Laboratory2',
+            name: 'Laboratory2',
+            meta: {title: '看板6'},
+            component: () => import("@/views/BigScreen/Laboratory2/Index")
+        }, {
             path: '/*',
             name: 'noFound',
             component: () => import("@/views/page403")

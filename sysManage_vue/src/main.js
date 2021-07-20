@@ -20,14 +20,11 @@ import "./permission"; // permission control
 import "./utils/error-log"; // error log
 
 import * as filters from "./filters"; // 全局实用程序过滤器
-
-
 import {Notification} from 'element-ui';
 
 import LunarFullCalendar from "vue-lunar-full-calendar"; //日历
 Vue.use(LunarFullCalendar);
 Vue.use(ElementUI);
-
 Vue.prototype.$http = api;
 Vue.prototype.$eventBus = new Vue();
 Vue.prototype.$notify = Notification;

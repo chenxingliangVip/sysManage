@@ -47,6 +47,14 @@ export default {
                     const {href} = this.$router.resolve({ path: '/QcScreen' })
                     window.open(href, '_blank')
                     return false
+                }else if( name == 'Laboratory' ) {
+                    const {href} = this.$router.resolve({ path: '/Laboratory' })
+                    window.open(href, '_blank')
+                    return false
+                }else if( name == 'Laboratory2' ) {
+                    const {href} = this.$router.resolve({ path: '/Laboratory2' })
+                    window.open(href, '_blank')
+                    return false
                 }
                 this.$router.push({ name });
             }
